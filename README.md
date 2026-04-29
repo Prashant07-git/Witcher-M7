@@ -1,38 +1,42 @@
-# Witcher M7
+Witcher M7 – PC Build Log
 
-Static PC build log for the Witcher M7 setup.
+This is a simple static website to showcase the Witcher M7 PC build.
 
-## Local preview
+Viewing it locally
 
-Open `index.html` in a browser.
+If you just want to see how the site looks:
 
-## AWS Amplify deployment
+Open the index.html file in your browser
+That’s it — no setup or installation needed
+Deploying on AWS Amplify
 
-1. Create a new GitHub repository.
-2. Push this folder to the repository.
-3. In AWS Amplify, choose **Deploy an app**.
-4. Connect the GitHub repository.
-5. Use the default static hosting settings. No build command is required.
+To put your site online:
 
-## Images
+Create a new repository on GitHub
+Upload (push) all project files to that repository
+Go to AWS Amplify
+Click on Deploy an app
+Connect your GitHub account and select your repository
+Keep the default settings (since this is a static site, no build step is required)
+Deploy
 
-Add optimized build photos to:
+Once done, Amplify will give you a live URL for your site
 
-- `images/pc-1.jpg`
-- `images/pc-2.jpg`
-- `images/pc-3.jpg`
-- `images/pc-4.jpg`
-- `images/pc-5.jpg`
+Adding images
 
-Recommended image sizes:
+Place your PC build images inside the images folder with these names:
 
-- Hero/gallery: 1600px wide, JPG/WebP, under 350 KB each if possible.
-- Use TinyPNG, Squoosh, or ImageOptim before upload.
+pc-1.jpg
+pc-2.jpg
+pc-3.jpg
+pc-4.jpg
+pc-5.jpg
+Recommended image tips:
+Keep width around 1600px for good quality
+Use JPG or WebP format
+Try to keep each image under 350 KB
+Compress images using tools like TinyPNG or Squoosh before uploading
+Telegram contact form setup
 
-## Telegram contact form
+The contact form works through a Cloudflare Worker:
 
-The contact form sends messages to a Cloudflare Worker:
-
-`https://witcherm7.prashantvasukar.workers.dev/`
-
-The Worker forwards messages to Telegram using Cloudflare secrets, so the bot token is not stored in GitHub or exposed in browser source.
