@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VHJYWTHD8V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VHJYWTHD8V');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My PC | Battle Station</title>
+  <style>
+
+    .header-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.insta-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #1f2937;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.insta-link:hover {
+  background: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.insta-link img {
+  width: 20px;
+  height: 20px;
+}
+
+    :root {
+      --bg: #0d0d0f;
+      --card: #141418;
+      --text: #e6e6eb;
+      --muted: #9a9aa3;
+      --accent: #3b82f6;
+      --danger: #ef4444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: -1px;
+    }
+
+    header span {
+      color: var(--accent);
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 600px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+    }
+
+    .spec {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      align-items: center;
+    }
+
+    .spec span {
+      text-align: left;
+    }
+
+    .spec strong {
+      text-align: right;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .spec strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #222;
+    }
+
+    .log {
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+      margin-bottom: 18px;
+    }
+
+    .log small {
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 80px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <header>
+  <div class="header-row">
+    <h1>Witcher <span>M7</span></h1>
+
+    <a
+  class="insta-link"
+  href="https://www.instagram.com/witcher_m7/"
+  target="_blank"
+  rel="noopener"
+  aria-label="Instagram"
+>
+  <img src="images/instagram.svg" alt="witcher_m7">
+</a>
+
+<a
+  class="insta-link"
+  href="https://www.reddit.com/user/Chemical_Rip6459/"
+  target="_blank"
+  rel="noopener"
+  aria-label="Reddit"
+>
+  <img src="images/reddit.svg" alt="Chemical_Rip6459">
+</a>
+
+  </div>
+
+  <p>Aggressive intent. Refined execution.</p>
+</header>
+
+      
+    </header>
+
+    <!-- SPECS -->
+    <section class="grid">
+      <div class="card">
+        <h2>Core Specs</h2>
+        <div class="spec"><span>CPU</span><strong>Intel Core Ultra 7 265K</strong></div>
+        <div class="spec"><span>GPU</span><strong>RTX 5070 Twin Edge OC 12GB GDDR7</strong></div>
+        <div class="spec"><span>RAM</span><strong>32gb G.Skill 16X2 6000MHz CL30 DDR5 RAM</strong></div>
+        <div class="spec"><span>Storage</span><strong>1 TB NVMe Gen 4.0 7,100 MB/s WD Blue SN5100</strong></div>
+        <div class="spec"><span>Motherboard</span><strong>ASUS PRIME Z890-Ps</strong></div>
+      </div>
+
+      <div class="card">
+        <h2>Thermals & Power</h2>
+        <div class="spec"><span>Case</span><strong>Antec Crystal X7</strong></div>
+        <div class="spec"><span>Cooler</span><strong>Deepcool LD240</strong></div>
+        <div class="spec"><span>PSU</span><strong>750 WATT 80 PLUS GOLD ATX 3.1</strong></div>
+        <div class="spec"><span>Fans</span><strong>7× ARGB</strong></div>
+      </div>
+
+      <div class="card">
+        <h2>Display & Peripherals</h2>
+        <div class="spec"><span>Monitor</span><strong>Samsung Odyssey G5 (QHD, 200Hz)</strong></div>
+        <div class="spec"><span>Keyboard</span><strong>Kreo Hive75 Black - Purple</strong></div>
+        <div class="spec"><span>Mouse</span><strong>EvoFox Banshee 2</strong></div>
+        <div class="spec"><span>Audio</span><strong>Cosmic Byte Inferno</strong></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section style="margin-top:60px">
+      <h2 style="margin-bottom:20px">Build Gallery</h2>
+      <div class="gallery">
+        <img src="images/pc-1.jpg" alt="PC Image 1">
+        <img src="images/pc-2.jpg" alt="PC Image 2">
+        <img src="images/pc-3.jpg" alt="PC Image 3">
+        <img src="images/pc-4.jpg" alt="PC Image 4">
+        <img src="images/pc-5.jpg" alt="PC Image 5">
+        <img src="images/pc-6.jpg" alt="PC Image 6">
+        <img src="images/pc-7.jpg" alt="PC Image 7">
+        <img src="images/pc-8.jpg" alt="PC Image 8">
+      </div>
+    </section>
+
+    <!-- CHANGE LOG -->
+    <section style="margin-top:60px">
+      
+      <h2 style="margin-bottom:20px">Upgrade / Change Log</h2>
+
+      <div class="log">
+        <strong>Ram Upgrade</strong><br>
+        <small>Jan 2026 16gb Ram Stick added</small>
+      </div>
+
+      <div class="log">
+        <strong>Boot and Stress Test</strong><br>
+        <small>Jan 2026 Booted for the first time and succesfully done Stress test.</small>
+      </div>
+
+      <div class="log">
+        <strong>Cooling Upgrade</strong><br>
+        <small>Jan 2026 ·Added AIO Deepcool LD240 AIO</small>
+      </div>
+
+      <div class="log">
+        <strong>Case Migration</strong><br>
+        <small>Dec 2025 · Antec Crystal X7</small>
+      </div>
+      <div class="log">
+        <strong>SSD</strong><br>
+        <small>Jan 2026 · Added 1 TB NVMe Gen 4.0.</small>
+      </div>
+      <div class="log">
+        <strong>RAM</strong><br>
+        <small>Jan 2026 · Added G.Skill 16GB RAM</small>
+      </div>
+      <div class="log">
+        <strong>Motherboard Added</strong><br>
+        <small>Dec 2025 · Added Asus z890P</small>
+      </div>
+      <div class="log">
+        <strong>GPU Added</strong><br>
+        <small>Aug 2025 · Added 5070 12gb Twin OC</small>
+      </div>
+      <div class="log">
+        <strong>CPU Added</strong><br>
+        <small>Aug 2025 · Added Intel Core Ultra 7 265K</small>
+      </div>
+      <div class="log">
+        <strong>Start</strong><br>
+        <small>June 2025 · Research started</small>
+      </div>
+    </section>
+
+    <footer>
+      Built with intent · Static · No frameworks · Pure control
+    </footer>
+
+  </div>
+
+</body>
+</html>
