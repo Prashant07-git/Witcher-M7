@@ -556,6 +556,22 @@
       font-size: 0.86rem;
     }
 
+    .form-status {
+      min-height: 22px;
+      margin: 0;
+      color: var(--soft);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .form-status.success {
+      color: var(--cyan);
+    }
+
+    .form-status.error {
+      color: #ffb4b4;
+    }
+
     footer {
       border-top: 1px solid var(--line);
       color: var(--soft);
@@ -803,7 +819,7 @@
         <aside class="card contact-info">
           <div>
             <h3>Find Witcher M7</h3>
-            <p>Message me directly or send a note through the form. The form opens your mail app, so it works on static hosting without a backend.</p>
+            <p>Message me directly or send a note through the form.</p>
           </div>
           <div class="socials">
             <a href="https://www.instagram.com/witcher_m7/" target="_blank" rel="noopener">Instagram</a>
@@ -824,6 +840,7 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" required></textarea>
           </div>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           <button class="button primary" type="submit">Send Message</button>
         </form>
       </div>
@@ -841,16 +858,46 @@
       });
     });
 
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
+    document.getElementById("contactForm").addEventListener("submit", async function (event) {
       event.preventDefault();
 
+      var form = event.currentTarget;
+      var button = form.querySelector("button[type='submit']");
+      var status = document.getElementById("formStatus");
       var name = document.getElementById("name").value.trim();
       var email = document.getElementById("email").value.trim();
       var message = document.getElementById("message").value.trim();
-      var subject = encodeURIComponent("Witcher M7 contact from " + name);
-      var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
 
-      window.location.href = "mailto:your-email@example.com?subject=" + subject + "&body=" + body;
+      status.className = "form-status";
+      status.textContent = "Sending...";
+      button.disabled = true;
+
+      try {
+        var response = await fetch("https://witcherm7.prashantvasukar.workers.dev/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error("Contact request failed");
+        }
+
+        form.reset();
+        status.className = "form-status success";
+        status.textContent = "Message sent. Thanks!";
+      } catch (error) {
+        status.className = "form-status error";
+        status.textContent = "Message could not be sent. Please try again later.";
+      } finally {
+        button.disabled = false;
+      }
     });
   </script>
 </body>

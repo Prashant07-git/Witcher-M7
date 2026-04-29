@@ -29,12 +29,10 @@ Recommended image sizes:
 - Hero/gallery: 1600px wide, JPG/WebP, under 350 KB each if possible.
 - Use TinyPNG, Squoosh, or ImageOptim before upload.
 
-## Contact form options
+## Telegram contact form
 
-The current form uses a `mailto:` fallback so it works on static hosting without a backend.
+The contact form sends messages to a Cloudflare Worker:
 
-Free or low-cost upgrade paths:
+`https://witcherm7.prashantvasukar.workers.dev/`
 
-- Formspree free tier for simple form submissions.
-- Getform free tier for static sites.
-- AWS Lambda + API Gateway + SES if you want everything inside AWS.
+The Worker forwards messages to Telegram using Cloudflare secrets, so the bot token is not stored in GitHub or exposed in browser source.
