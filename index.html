@@ -256,6 +256,31 @@
       padding: 18px;
     }
 
+    .hero-visual-label {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      max-width: 320px;
+      border-left: 3px solid var(--cyan);
+      padding-left: 14px;
+      text-shadow: 0 12px 28px rgba(0, 0, 0, 0.62);
+    }
+
+    .hero-visual-label strong {
+      display: block;
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      line-height: 1;
+    }
+
+    .hero-visual-label span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
     .hero-panel-top {
       display: flex;
       justify-content: space-between;
@@ -478,10 +503,29 @@
     }
 
     .contact-info {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       min-height: 380px;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(8, 13, 24, 0.94), rgba(8, 13, 24, 0.72)),
+        url("images/pc-3.jpg") center / cover,
+        rgba(255, 255, 255, 0.045);
+    }
+
+    .contact-info::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 78% 30%, rgba(101, 216, 255, 0.16), transparent 34%);
+      pointer-events: none;
+    }
+
+    .contact-info > * {
+      position: relative;
+      z-index: 1;
     }
 
     .contact-info p {
@@ -681,8 +725,7 @@
         <div class="eyebrow"><span class="pulse"></span> Battle station build log</div>
         <h1>Witcher <span>M7</span></h1>
         <p class="hero-copy">
-          A custom gaming PC built around high-end performance, sharp cooling, and a clean black-and-blue identity.
-          This is the home of the full Witcher M7 build.
+          Aggressive intent, refined execution.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#specs">View Build</a>
@@ -691,6 +734,10 @@
       </div>
 
       <div class="hero-visual" aria-label="Witcher M7 PC build visual">
+        <div class="hero-visual-label">
+          <strong>Witcher M7</strong>
+          <span>Black and blue custom PC</span>
+        </div>
         <div class="hero-panel">
           <div class="hero-panel-top">
             <span>Current configuration</span>
@@ -717,7 +764,7 @@
     <section class="site-shell section" id="specs">
       <div class="section-heading">
         <h2>Hardware Stack</h2>
-        <p>The current parts powering Witcher M7, from the core platform to cooling, storage, and display gear.</p>
+        <p>Cleanly grouped specs</p>
       </div>
 
       <div class="spec-grid">
